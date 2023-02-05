@@ -1,0 +1,25 @@
+{
+  "burgers_2": [
+    {
+      "id": "chicken_burger",
+      "name": "Chicken burger",
+      "price": 100,
+      "available_toppings": [{"name": "Potatoes", "price": 20} , {"name": "Salad", "price": 15}, {"name":"Cheese", "price": 20}],
+      "images": "https://www.chicken.ca/wp-content/uploads/2013/05/Moist-Chicken-Burgers-1180x580.jpg"
+    },
+    {
+      "id": "pork_burger",
+      "name": "Pork burger",
+      "price": 150,
+      "available_toppings": [{"name": "Potatoes", "price": 20} , {"name": "Salad", "price": 15}, {"name":"Tomatoes", "price": 20}],
+      "images": "https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg"
+    },
+    {
+      "id": "beef_burger",
+      "name": "Beef burger",
+      "price": 140,
+      "available_toppings": [{"name": "Potatoes", "price": 20} , {"name": "Salad", "price": 15}, {"name":"Cheese", "price": 20}],
+      "images": "https://www.certifiedirishangus.ie/wp-content/uploads/2019/11/TheUltimateBurgerwBacon_RecipePic.jpg"
+    }
+  ]
+}
