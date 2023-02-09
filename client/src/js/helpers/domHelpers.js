@@ -1,70 +1,8 @@
 import {API_ORDERS} from '../urls.js';
+import { Hamburger } from './Hamburger.js';
 
 export let myBurger;
 export let myOrder = {};
-class Hamburger {
-    constructor(burger, sizeHamb, stuffHamb) {
-        this.burger = burger;
-        this.sizeHamb = sizeHamb;
-        this.stuffHamb = stuffHamb;
-    }
-
-    static size = [
-        {name: "Small", price: 50, calories: 20,},
-        {name: "Big", price: 100, calories: 40,}
-    ];
- 
-    static stuffing = [
-        {name: 'Tomatoes', price: 10, calories: 10,},
-        {name: 'Salad', price: 15, calories: 5,},
-        {name: 'Potatoes', price: 20, calories: 20,},
-        {name: 'Cheese', price: 20, calories: 20,}
-    ];
-
-    #totalPrice = 0;
-
-    showBurger() {
-      let myOrderHamb = {};
-        if (this.stuffHamb !== undefined && this.stuffHamb !== null) {
-          myOrderHamb = {name: this.burger, size: this.sizeHamb.name, stuffing: this.stuffHamb.name, price: this.#totalPrice};
-          console.log(`Name: ${this.burger} Size: ${this.sizeHamb.name}, Stuffing: ${this.stuffHamb.name}, Price: ${this.#totalPrice}`);
-        } else {
-          myOrderHamb = {name: this.burger, size: this.sizeHamb.name, stuffing: 'no', price: this.#totalPrice};
-          console.log(`Name: ${this.burger} Size: ${this.sizeHamb.name}, Stuffing: no, Price: ${this.#totalPrice}`);
-        }
-        return myOrderHamb;
-    }
-    changeSize(value) {
-      if(value === 'big') {
-        this.sizeHamb = Hamburger.size[1];
-      } else {
-        this.sizeHamb = Hamburger.size[0];
-      }
-    }
-    changeStuffing(value) {
-      if(value == 'Potatoes') {
-        this.stuffHamb = Hamburger.stuffing[2];
-      } else if (value == 'Salad') {
-        this.stuffHamb = Hamburger.stuffing[1];
-      } else if (value == 'Cheese') {
-        this.stuffHamb = Hamburger.stuffing[3];
-      } else if (value == 'Tomatoes') {
-        this.stuffHamb = Hamburger.stuffing[0];
-      } else {
-        this.stuffHamb == undefined;
-      }
-    }
-
-    calculatePrice(value) {
-        let stuffPrice = 0;
-        if (this.stuffHamb !== undefined) {
-          stuffPrice += this.stuffHamb.price;
-        }
-        this.#totalPrice = value + this.sizeHamb.price + stuffPrice;
-        return this.#totalPrice;
-    }
-}
-
 
 export function createElement(tagName, content, attributes, eventHandlers, parent) {
   const parentElem = 
